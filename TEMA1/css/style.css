@@ -7,6 +7,7 @@
   list-style: none;
   text-decoration: none;
 }
+/* Variáveis de todas as páginas */
 :root {
   --var-white-color: #fafafa;
   --var-dark-color: #0e0e0e;
@@ -14,13 +15,13 @@
   --var-two-color: rgb(140, 32, 212);
   --var-tree-color: #2b1055;
   --var-four-color: #7597de;
-  --var-gradient-color: linear-gradient(#2b1055, #7597de);
+  --var-five-color: rgb(255, 0, 200);;
 }
-
+/* Body de todas as páginas */
 body {
   width: 100%;
 }
-
+/* Header de todas as páginas */
 header {
   top: 0;
   left: 0;
@@ -30,7 +31,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--var-dark-color);
 
   & div {
     display: flex;
@@ -41,17 +42,24 @@ header {
     margin-left: 1rem;
     width: 100px;
   }
-  .home {
-    font-weight: bolder;
-    color: var(--var-white-color);
-    width: 11%;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
-    transition-duration: 0.3s;
-  }
+  
+}
+/* link adicionados em todas as páginas */
+.home {
+  font-weight: bolder;
+  color: var(--var-white-color);
+  width: 15%;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  transition-duration: 0.3s;
 }
 
+.home--nav{
+ width: 25px;
+}
+
+/* Botões adicionados em todas as páginas */
 .Btn {
   margin: 0 0.25rem;
   width: 125px;
@@ -69,32 +77,44 @@ header {
   border-radius: 10px;
   box-shadow: 5px 5px 0px var(--var-two-color);
 }
+/* Estilo diferente adicionado à página inicial */
 .menu--temas {
   width: 100%;
   margin: 1rem auto;
 }
+/* NavBar de todas as páginas */
 .menu {
+  display: flex;
   font-size: 85%;
-  background-color: var(--var-tree-color);
+  background-color: var(--var-five-color);
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
   & ul {
-    margin: 0 10%;
+    margin:  auto 5%;
     & li,
     a {
-      color: #fff;
+      color: var(--var-white-color);
       text-decoration: none;
       display: inline-block;
     }
     & li a {
-      padding: 1rem 2rem;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
     }
     & li a:hover {
       font-weight: 700;
-      background-color: #eaebec;
-      color: #333;
+      background-color: var(--var-four-color);
+      color: var(--var-white-color);
+    }
+    &  li a.active {
+      background-color: #0e0e0e;
     }
   }
 }
+/* Main de todas as páginas, com inclusão dos elementos diferentes cada página */
 main {
   margin-top: 1rem;
   min-height: 50vh;
@@ -103,7 +123,7 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  
+
   & div {
     padding: 6% 10%;
     display: flex;
@@ -112,11 +132,12 @@ main {
   }
   & div.elements {
     border-radius: 0.75rem;
-    border: 0.5vmin solid #05060f;
-    box-shadow: 0.4rem 0.4rem #05060f;
+    border: 0.5vmin solid var(--var-dark-color);
+    box-shadow: 0.4rem 0.4rem var(--var-dark-color);
   }
 }
 
+/* Estilo da página do formulário */
 form {
   display: flex;
   align-items: start;
@@ -124,21 +145,21 @@ form {
   text-align: start;
   flex-direction: column;
   width: 50%;
-  background: #ffffff;
+  background: var(--var-white-color);
   min-height: 80%;
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
-  border: 0.5vmin solid #05060f;
-  box-shadow: 0.4rem 0.4rem #05060f;
+  border: 0.5vmin solid var(--var-dark-color);
+  box-shadow: 0.4rem 0.4rem var(--var-dark-color);
   overflow: hidden;
-  color: black;
+  color: var(--var-dark-color);
   & input {
     margin: 0.5rem 0;
     padding: 1rem;
     width: 100%;
     border-radius: 8px;
-    border: 0.5px solid #05060f;
+    border: 0.5px solid var(--var-dark-color);
   }
   & label {
     font-weight: 500;
@@ -147,20 +168,20 @@ form {
     margin: 1rem auto;
     padding: 0.5rem 1.5rem;
     border-radius: 8px;
-    background-color: #05060f;
-    color: #ffffff;
+    background-color: var(--var-dark-color);
+    color: var(--var-white-color);
     font-weight: 700;
-    border: 0.5px solid #05060f;
+    border: 0.5px solid var(--var-dark-color);
   }
 }
-
+/* Estilo da página 1 */
 .section--pag1 {
   font-weight: 500;
   width: 90%;
   margin: 0 auto;
   border-radius: 0.75rem;
-  border: 0.5vmin solid #05060f;
-  box-shadow: 0.4rem 0.4rem #05060f;
+  border: 0.5vmin solid var(--var-dark-color);
+  box-shadow: 0.4rem 0.4rem var(--var-dark-color);
 
   & header h1 {
     width: 100%;
@@ -174,7 +195,7 @@ form {
       margin: 0 10%;
       & li,
       a {
-        color: #fff;
+        color: var(--var-white-color);
         text-decoration: none;
         display: inline-block;
       }
@@ -183,8 +204,8 @@ form {
       }
       & li a:hover {
         font-weight: 700;
-        background-color: #eaebec;
-        color: #333;
+        background-color: var(--var-white-color);
+        color: var(--var-white-color);
       }
     }
   }
@@ -209,13 +230,14 @@ form {
   }
 }
 
+/* Footer de todas as páginas */
 footer#copyRight {
   margin-top: 1rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--var-dark-color);
   position: relative;
   bottom: 0;
-  background-color: #fafafa;
-  color: #0e0e0e;
+  background-color: var(--var-white-color);
+  color: var(--var-dark-color);
   font-size: 85%;
   width: 100%;
   font-style: none;
@@ -229,7 +251,67 @@ footer#copyRight {
     font-weight: bold;
   }
 }
-
+/* Footer da página 2 */
 .footer--tasklist {
   font-size: 16px;
+}
+/* Estilo da página Desafio profissional */
+
+.area--calculadora {
+  max-width: 600px;
+  margin: 1rem auto;
+ border: 1px solid;
+ border-radius: 8px;
+  .row {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+
+    & .clear {
+      color: var(--var-dark-color);
+      background-color: rgb(255, 217, 0);
+      box-shadow: 5px 5px 0px rgb(252, 231, 111);
+    }
+    & .operadores {
+      background-color: rgb(255, 0, 200);
+      box-shadow: 5px 5px 0px rgb(192, 2, 151);
+    }
+    & .operador--resultado {
+      background-color: rgb(12, 213, 49);
+      box-shadow: 5px 5px 0px rgb(8, 146, 33);
+    }
+
+    & .btn--hover:hover {
+      background-color: var(--var-dark-color);
+      color: var(--var-white-color);
+    }
+  }
+  & .btn-clear {
+    justify-content: flex-end;
+  }
+
+  #btnLimpar {
+    color: var(--var-black-color);
+  }
+
+  & #inputCalculadora {
+    font-size: 1.5rem;
+    width: 98%;
+    text-align: le;
+    color: var(--var-dark-color);
+    box-shadow: 5px 5px 0px var(--var-dark-color);
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  & button {
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 4rem;
+    color: var(--var-white-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }
